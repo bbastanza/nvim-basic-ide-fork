@@ -44,10 +44,10 @@ for _, value in pairs(repeated) do
 	keymap(value, "<C-l>", "<C-w>l", opts)
 
 	-- Resize with arrows
-	keymap(value, "<C-Up>", ":resize -2<CR>", opts)
-	keymap(value, "<C-Down>", ":resize +2<CR>", opts)
-	keymap(value, "<C-Left>", ":vertical resize -2<CR>", opts)
-	keymap(value, "<C-Right>", ":vertical resize +2<CR>", opts)
+	keymap(value, "<C-Up>", ":resize -4<CR>", opts)
+	keymap(value, "<C-Down>", ":resize +4<CR>", opts)
+	keymap(value, "<C-Left>", ":vertical resize -4<CR>", opts)
+	keymap(value, "<C-Right>", ":vertical resize +4<CR>", opts)
 end
 
 -- Stay in indent mode
@@ -62,4 +62,3 @@ keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-
