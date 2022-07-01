@@ -102,6 +102,11 @@ return packer.startup(function(use)
     -- vim surround
      use{ "tpope/vim-surround", commit = "bf3480dc9ae7bea34c78fbba4c65b4548b5b1fea"}
 
+    --lightblub
+    use({
+        "kosayoda/nvim-lightbulb", commit= "1e2844b68a07d3e7ad9e6cc9a2aebc347488ec1b",
+        requires = {"antoinemadec/FixCursorHold.nvim", commit = "1bfb32e7ba1344925ad815cb0d7f901dbc0ff7c1"},
+    })
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
