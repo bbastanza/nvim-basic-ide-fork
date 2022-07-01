@@ -1,6 +1,6 @@
 local status_ok, comment = pcall(require, "Comment")
 if not status_ok then
-    vim.notify("comment failed to load. file://nvim/lua/user/comment.lua")
+    vim.notify("comment failed to load. file: " .. "comment.lua")
   return
 end
 

@@ -1,6 +1,6 @@
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
-    vim.notify("nvim-tree failed to load. file://nvim/lua/user/nvim-tree.lua")
+    vim.notify("nvim-tree failed to load. file: " .. "nvim-tree.lua")
   return
 end
 

@@ -1,6 +1,6 @@
 local status_ok, alpha = pcall(require, "alpha")
 if not status_ok then
-    vim.notify("alpha failed to load. file://nvim/lua/user/alpha.lua")
+    vim.notify("alpha failed to load. file: " .. "alpha.lua")
 	return
 end
 
