@@ -35,7 +35,6 @@ for _, value in pairs(repeated) do
 	keymap(value, "<leader>;", "$", opts)
 	keymap(value, "<leader>j", "o<Esc>cc<Esc>k", opts)
 	keymap(value, "<leader>k", "O<Esc>cc<Esc>j", opts)
-	keymap(value, "<leader>fs", ":w<CR>", opts)
 	keymap(value, "<BS>", "X", opts)
 
 	-- Window Movement --
@@ -49,10 +48,6 @@ for _, value in pairs(repeated) do
 	keymap(value, "<C-Down>", ":resize +2<CR>", opts)
 	keymap(value, "<C-Left>", ":vertical resize -2<CR>", opts)
 	keymap(value, "<C-Right>", ":vertical resize +2<CR>", opts)
-
-
-    keymap(value, "<leader>e", ":NvimTreeToggle<CR>", opts)
-    keymap(value, "<leader>o", ":ToggleTerm<CR>", opts)
 end
 
 -- Stay in indent mode
