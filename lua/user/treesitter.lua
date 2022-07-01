@@ -15,4 +15,17 @@ configs.setup({
 		enable = true,
 	},
 	indent = { enable = true, disable = { "python", "css" } },
+    rainbow = {
+        enable = true,
+        -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
+        extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
+        max_file_lines = nil, -- Do not enable for files with more than n lines, int
+        colors = {
+            "#e5c07b",
+            "#d19a66",
+            "#e06c75",
+            "#c678dd",
+        }, -- table of hex strings
+        -- termcolors = {} -- table of colour name strings
+    }
 })
