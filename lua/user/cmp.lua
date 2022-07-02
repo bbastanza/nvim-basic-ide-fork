@@ -1,12 +1,12 @@
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
-    vim.notify("cmp failed to load. file: " .. "cmp.lua")
+	vim.notify("cmp failed to load. file: " .. "cmp.lua")
 	return
 end
 
 local snip_status_ok, luasnip = pcall(require, "luasnip")
 if not snip_status_ok then
-    vim.notify("luasnip failed to load. file: " .. "cmp.lua")
+	vim.notify("luasnip failed to load. file: " .. "cmp.lua")
 	return
 end
 
@@ -66,12 +66,12 @@ cmp.setup({
 		-- Set `select` to `false` to only confirm explicitly selected items.
 		["<CR>"] = cmp.mapping.confirm({ select = true }),
 		["<Tab>"] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_next_item()
-			elseif luasnip.expandable() then
-				luasnip.expand()
-			elseif luasnip.expand_or_jumpable() then
-				luasnip.expand_or_jump()
+			-- if cmp.visible() then
+			-- 	cmp.select_next_item()
+			-- elseif luasnip.expandable() then
+			-- 	luasnip.expand()
+			if luasnip.jumpable(1) then
+				luasnip.jump(1)
 			elseif check_backspace() then
 				fallback()
 			else
@@ -82,9 +82,9 @@ cmp.setup({
 			"s",
 		}),
 		["<S-Tab>"] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_prev_item()
-			elseif luasnip.jumpable(-1) then
+			-- if cmp.visible() then
+			-- cmp.select_prev_item()
+			if luasnip.jumpable(-1) then
 				luasnip.jump(-1)
 			else
 				fallback()
