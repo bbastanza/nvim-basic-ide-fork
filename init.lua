@@ -8,7 +8,7 @@ require("user.telescope")
 require("user.treesitter")
 require("user.autopairs")
 require("user.comment")
--- require "user.gitsigns"
+require("user.gitsigns")
 require("user.nvim-tree")
 require("user.bufferline")
 require("user.lualine")
@@ -16,8 +16,10 @@ require("user.toggleterm")
 require("user.project")
 require("user.impatient")
 require("user.illuminate")
--- require "user.indentline"
+require("user.indentline")
 require("user.alpha")
 require("user.whichkey")
 require("user.lsp")
--- require "user.dap"
+require("user.dap")
+
+-- TODO add the telescope themes for lookup... i think its called dropdown?

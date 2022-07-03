@@ -103,7 +103,10 @@ return packer.startup(function(use)
 	use({
 		"kosayoda/nvim-lightbulb",
 		commit = "1e2844b68a07d3e7ad9e6cc9a2aebc347488ec1b",
-		requires = { "antoinemadec/FixCursorHold.nvim", commit = "1bfb32e7ba1344925ad815cb0d7f901dbc0ff7c1" },
+		requires = {
+			"antoinemadec/FixCursorHold.nvim",
+			commit = "1bfb32e7ba1344925ad815cb0d7f901dbc0ff7c1",
+		},
 	})
 
 	-- doom one theme!!!
@@ -140,6 +143,7 @@ return packer.startup(function(use)
 	-- 	end,
 	-- })
 	-- Automatically set up your configuration after cloning packer.nvim
+
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
